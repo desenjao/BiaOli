@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessórios Elegance</title>
+    <style>
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+        }
+        
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #000;
+        }
+        
+        .carrinho {
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #444;
+        }
+        
+        /* Seção de Destaques */
+        #destaques {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: #222;
+        }
+        
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .produto-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .produto-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .produto-imagem {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .produto-info {
+            padding: 20px;
+        }
+        
+        .produto-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .produto-info p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        .produto-preco {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #222;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .add-to-cart {
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #444;
+        }
+        
+        /* Seção Sobre */
+        #sobre {
+            padding: 80px 5%;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        
+        #sobre p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+        
+        /* Seção Contato */
+        #contato {
+            padding: 80px 5%;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .contato-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .contato-form input,
+        .contato-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .contato-form textarea {
+            height: 120px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            nav {
+                margin: 15px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .produtos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Acessórios Elegance</div>
+        <nav>
+            <a href="#destaques">Destaques</a>
+            <a href="#colecao">Coleção</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <div class="carrinho">🛒 <span id="cart-count">0</span></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Acessórios que Transformam Seu Estilo</h1>
+            <p>Peças exclusivas para complementar seu visual com elegância</p>
+            <button class="cta-button" onclick="scrollToSection('destaques')">Ver Coleção</button>
+        </div>
+    </section>
+
+    <section id="destaques">
+        <h2 class="section-title">Nossos Destaques</h2>
+        <div class="produtos-grid">
+            <div class="produto-card">
+                <div class="produto-imagem">💍</div>
+                <div class="produto-info">
+                    <h3>Anel Prata</h3>
+                    <p>Anel em prata 925 com detalhe em zircônia</p>
+                    <span class="produto-preco">R$ 149,90</span>
+                    <button class="add-to-cart" onclick="addToCart('Anel Prata', 149.90)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="produto-card">
+                <div class="produto-imagem">🕶️</div>
+                <div class="produto-info">
+                    <h3>Óculos de Sol</h3>
+                    <p>Óculos de sol com lentes polarizadas</p>
+                    <span class="produto-preco">R$ 199,90</span>
+                    <button class="add-to-cart" onclick="addToCart('Óculos de Sol', 199.90)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="produto-card">
+                <div class="produto-imagem">🧣</div>
+                <div class="produto-info">
+                    <h3>Cachecol de Lã</h3>
+                    <p>Cachecol 100% lã merino, várias cores</p>
+                    <span class="produto-preco">R$ 89,90</span>
+                    <button class="add-to-cart" onclick="addToCart('Cachecol de Lã', 89.90)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="produto-card">
+                <div class="produto-imagem">👒</div>
+                <div class="produto-info">
+                    <h3>Chapéu de Palha</h3>
+                    <p>Chapéu de palha com acabamento em fita</p>
+                    <span class="produto-preco">R$ 129,90</span>
+                    <button class="add-to-cart" onclick="addToCart('Chapéu de Palha', 129.90)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2 class="section-title">Sobre Nós</h2>
+        <p>A Acessórios Elegance nasceu da paixão por complementos que transformam qualquer visual em algo especial. Nossa missão é oferecer peças de qualidade, com design atemporal, que acompanhem você em todos os momentos.</p>
+        <p>Todos os nossos produtos são selecionados com cuidado para garantir qualidade e durabilidade, porque acreditamos que bons acessórios devem durar tanto quanto suas memórias.</p>
+    </section>
+
+    <section id="contato">
+        <h2 class="section-title">Entre em Contato</h2>
+        <form class="contato-form">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <input type="text" placeholder="Assunto">
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="cta-button">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Acessórios Elegance. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Carrinho de compras simples
+        let cartItems = [];
+        let cartTotal = 0;
+        
+        function addToCart(productName, price) {
+            cartItems.push({name: productName, price: price});
+            cartTotal += price;
+            updateCartCount();
+            
+            // Feedback visual
+            alert(`${productName} foi adicionado ao carrinho!`);
+        }
+        
+        function updateCartCount() {
+            document.getElementById('cart-count').textContent = cartItems.length;
+        }
+        
+        // Rolagem suave para seções
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Formulário de contato
+        document.querySelector('.contato-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
+            this.reset();
+        });
+        
+        // Atualiza o contador do carrinho ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
