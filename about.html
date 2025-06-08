@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biaoli Acessórios</title>
+  <title>Biaoli Acessórios - Minha História</title>
   <!-- Favicon (substitua pelo caminho correto ou garanta que 'img/favicon.png' existe) -->
   <link rel="icon" type="image/png" href="img/favicon.png">
   <!-- Google Fonts: Inter -->
@@ -39,49 +39,39 @@
       text-align: center;
     }
 
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 0 auto 15px;
-      background-color: #ccc;
-      background-image: url('img/image.png'); /* Substitua por sua imagem real */
-      background-size: cover;
-      background-position: center;
-    }
-
-    .handle {
-      font-size: 16px;
-      color: #d4a017;
-      margin-bottom: 8px;
-    }
-
-    .name {
-      font-size: 28px;
+    .title {
+      font-size: 24px;
       font-weight: 700;
-      color: #333;
-      margin-bottom: 5px;
+      color: #d4a017;
+      margin-bottom: 15px;
     }
 
-    body.dark-mode .name {
-      color: #ccc;
-    }
-
-    .bio {
+    .about-text {
       font-size: 16px;
       color: #666;
+      line-height: 1.6;
       margin-bottom: 20px;
+      text-align: left;
     }
 
-    body.dark-mode .bio {
+    body.dark-mode .about-text {
       color: #bbb;
     }
 
-    .action-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 20px;
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #d4a017;
+      margin: 15px 0 10px;
+      text-align: left;
+    }
+
+    .quote {
+      font-size: 16px;
+      font-style: italic;
+      color: #d4a017;
+      margin: 20px 0;
+      text-align: center;
     }
 
     .btn-primary {
@@ -92,46 +82,16 @@
       text-decoration: none;
       font-size: 16px;
       font-weight: 700;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
       transition: background 0.3s, transform 0.2s;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      margin: 10px 0;
     }
 
     .btn-primary:hover {
       background: linear-gradient(45deg, #b88b14, #d4a017);
-      transform: scale(1.03);
-    }
-
-    .btn-secondary {
-      background-color: #fff;
-      color: #d4a017;
-      padding: 12px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: 2px solid #d4a017;
-      transition: background 0.3s, transform 0.2s;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    body.dark-mode .btn-secondary {
-      background-color: #2a2a2a;
-      color: #d4a017;
-      border: 2px solid #d4a017;
-    }
-
-    .btn-secondary:hover {
-      background: linear-gradient(45deg, #d4a017, #e8b923);
-      color: white;
-      border: none;
       transform: scale(1.03);
     }
 
@@ -181,7 +141,7 @@
     }
 
     .mode-toggle:hover {
-      background: linear-gradient(45deg, Bong, #b88b14, #d4a017);
+      background: linear-gradient(45deg, #b88b14, #d4a017);
     }
 
     /* Estilos do Modal */
@@ -270,17 +230,25 @@
 <body>
   <button class="mode-toggle" onclick="toggleMode()" aria-label="Alternar entre modo claro e escuro">Modo Escuro</button>
   <div class="container">
-    <div class="profile-pic"></div>
-    <div class="handle">@biaolip_</div>
-    <div class="name">Beatriz Oliveira</div>
-    <div class="bio">Empreendedora ✨ Fé, coragem e ousadia. 🌙</div>
-    <div class="action-buttons">
-      <a href="https://wa.me/558994672349" class="btn-primary" onclick="showModal(event, 'https://wa.me/558994672349')" aria-label="Entrar em contato via WhatsApp"><i class="fas fa-comment-dots"></i> Fale Comigo no WhatsApp</a>
-      <a href="https://www.instagram.com/biaoli.acessorios_/" class="btn-secondary" onclick="showModal(event, 'https://www.instagram.com/biaoli.acessorios_/')" aria-label="Seguir no Instagram @biaoli.acessorios_"><i class="fab fa-instagram"></i> Siga @biaoli.acessorios_</a>
-      <a href="https://www.instagram.com/agency_lidera/" class="btn-secondary" onclick="showModal(event, 'https://www.instagram.com/agency_lidera/')" aria-label="Visitar Instagram @agency_lidera"><i class="fab fa-instagram"></i> Veja @agency_lidera</a>
-
-      <a href="about.html" class="btn-secondary" onclick="showModal(event, 'about.html')" aria-label="Conhecer minha trajetória"><i class="fas fa-user"></i> Conheça Minha História</a>
+    <div class="title">Minha História</div>
+    <div class="about-text">
+      Oi, eu sou a Beatriz Oliveira! 🌟 Há dois anos, comecei um sonho que parecia distante: criar acessórios que transformassem looks e trouxessem alegria. Com miçangas e muita paixão, fundei a <strong>Biaoli Acessórios</strong>, sem imaginar a proporção que isso tomaria. Cada peça que crio carrega um pedacinho de mim — fé, coragem e ousadia.
     </div>
+    <div class="section-title">Biaoli Acessórios</div>
+    <div class="about-text">
+      Tudo começou com uma lojinha artesanal. Eu amava ver como um acessório podia mudar um look e fazer alguém se sentir especial. Com o tempo, minhas estratégias de marketing digital e o carinho dos clientes transformaram a Biaoli em algo maior. Cada feedback, cada pessoa que buscava meu trabalho, me mostrava o potencial do que eu criava. Hoje, a Biaoli é sobre autenticidade, estilo e conexões que vão além das peças.
+    </div>
+    <div class="section-title">Agency Lídera</div>
+    <div class="about-text">
+      Minha experiência com a Biaoli me ensinou o poder do marketing digital, e foi assim que nasceu a <strong>Agency Lídera</strong>. Com ela, ajudo marcas a brilharem nas redes sociais, com estratégias criativas que geram resultados. Meu objetivo é transformar sonhos em realidade, assim como fiz com a minha própria jornada.
+    </div>
+    <div class="about-text">
+      Sou grata por ter pessoas incríveis ao meu lado — minha mãe, meu pai, meu irmão, amigos queridos e clientes que se tornaram amigas. Mas, acima de tudo, sou orgulhosa da mulher que me tornei. Minha fé em Deus é meu combustível, e estou pronta para as bênçãos que ainda virão. Vamos construir algo incrível juntos?
+    </div>
+    <div class="quote">"Sonhe, planeje e faça acontecer!"</div>
+    <a href="https://wa.me/558994672349" class="btn-primary" onclick="showModal(event, 'https://wa.me/558994672349')" aria-label="Entrar em contato via WhatsApp"><i class="fas fa-comment-dots"></i> Fale Comigo</a>
+    <br>
+    <a href="index.html" class="btn-primary" aria-label="Voltar para a página inicial"><i class="fas fa-arrow-left"></i> Voltar</a>
     <div class="footer">
       © <span id="currentYear"></span> Beatriz Oliveira | 
       <a href="https://www.instagram.com/biaoli.acessorios_/" onclick="showModal(event, 'https://www.instagram.com/biaoli.acessorios_/')" aria-label="Visitar Instagram @biaoli.acessorios_"><i class="fab fa-instagram"></i></a>
@@ -322,8 +290,6 @@
         modalMessage.innerHTML = 'Você será levado ao Instagram <strong>@agency_lidera</strong>. Vamos explorar? 😊';
       } else if (url.includes('wa.me')) {
         modalMessage.innerHTML = 'Você será levado ao <strong>WhatsApp</strong> para conversar comigo. Vamos trocar ideias? 📲';
-      } else if (url.includes('about.html')) {
-        modalMessage.innerHTML = 'Você será levado à página <strong>Sobre Mim</strong>. Conheça minha história! 🌟';
       } else {
         modalMessage.innerHTML = 'Você será levado a um <strong>link externo</strong>. Vamos lá? 🚀';
       }
