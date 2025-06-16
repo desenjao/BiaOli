@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biaoli Acessórios</title>
+  <title>Biaoli Acessórios - Bijuterias e Moda por Beatriz Oliveira</title>
+  <meta name="description" content="Descubra bijuterias exclusivas na Biaoli Acessórios, criada por Beatriz Oliveira. Converse pelo WhatsApp e siga no Instagram!">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://biaoli.vercel.app/">
   <!-- Favicon (substitua pelo caminho correto ou garanta que 'img/favicon.png' existe) -->
   <link rel="icon" type="image/png" href="img/favicon.png">
   <!-- Google Fonts: Inter -->
@@ -44,10 +47,7 @@
       height: 100px;
       border-radius: 50%;
       margin: 0 auto 15px;
-      background-color: #ccc;
-      background-image: url('img/image.png'); /* Substitua por sua imagem real */
-      background-size: cover;
-      background-position: center;
+      object-fit: cover;
     }
 
     .handle {
@@ -74,6 +74,17 @@
     }
 
     body.dark-mode .bio {
+      color: #bbb;
+    }
+
+    .intro-text {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    body.dark-mode .intro-text {
       color: #bbb;
     }
 
@@ -178,10 +189,11 @@
       font-weight: 700;
       transition: background 0.3s;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1001;
     }
 
     .mode-toggle:hover {
-      background: linear-gradient(45deg, Bong, #b88b14, #d4a017);
+      background: linear-gradient(45deg, #b88b14, #d4a017);
     }
 
     /* Estilos do Modal */
@@ -270,15 +282,19 @@
 <body>
   <button class="mode-toggle" onclick="toggleMode()" aria-label="Alternar entre modo claro e escuro">Modo Escuro</button>
   <div class="container">
-    <div class="profile-pic"></div>
+    <img src="img/image.png" alt="Foto de Beatriz Oliveira" class="profile-pic">
     <div class="handle">@biaolip_</div>
-    <div class="name">Beatriz Oliveira</div>
-    <div class="bio">Empreendedora ✨ Fé, coragem e ousadia. 🌙</div>
+    <h1 class="name">Beatriz Oliveira</h1>
+    <h2 class="bio">Empreendedora ✨ Fé, coragem e ousadia. 🌙</h2>
+    <p class="intro-text">Acessórios Feminino | Semi joia | folheados
+Acessórios para mulheres básicas, práticas e elegantes 💛
+<p></p>
+📍São Raimundo e região
+Compre e se apaixone 🛍️👇🏼</p>
     <div class="action-buttons">
       <a href="https://wa.me/558994672349" class="btn-primary" onclick="showModal(event, 'https://wa.me/558994672349')" aria-label="Entrar em contato via WhatsApp"><i class="fas fa-comment-dots"></i> Fale Comigo no WhatsApp</a>
       <a href="https://www.instagram.com/biaoli.acessorios_/" class="btn-secondary" onclick="showModal(event, 'https://www.instagram.com/biaoli.acessorios_/')" aria-label="Seguir no Instagram @biaoli.acessorios_"><i class="fab fa-instagram"></i> Siga @biaoli.acessorios_</a>
-      <a href="https://www.instagram.com/agency_lidera/" class="btn-secondary" onclick="showModal(event, 'https://www.instagram.com/agency_lidera/')" aria-label="Visitar Instagram @agency_lidera"><i class="fab fa-instagram"></i> Veja @agency_lidera</a>
-
+      <a href="https://www.instagram.com/agency_lidera/" class="btn-secondary" onclick="showModal(event, 'https://wwwstagram.com/agency_lidera/')" aria-label="Visitar Instagram @agency_lidera"><i class="fab fa-instagram"></i> Veja @agency_lidera</a>
       <a href="about.html" class="btn-secondary" onclick="showModal(event, 'about.html')" aria-label="Conhecer minha trajetória"><i class="fas fa-user"></i> Conheça Minha História</a>
     </div>
     <div class="footer">
@@ -299,6 +315,21 @@
     </div>
   </div>
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Beatriz Oliveira",
+  "url": "https://biaoli.vercel.app/",
+  "image": "https://biaoli.vercel.app/img/image.png",
+  "sameAs": [
+    "https://www.instagram.com/biaoli.acessorios_/",
+    "https://www.instagram.com/agency_lidera/",
+    "https://wa.me/558994672349"
+  ],
+  "description": "Empreendedora e criadora da Biaoli Acessórios, especializada em bijuterias artesanais."
+}
+  </script>
   <script>
     // Atualizar ano no footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
